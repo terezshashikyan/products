@@ -1,38 +1,77 @@
-.App {
-  text-align: center;
-}
+/* .headName {
+  font-family: 'Poppins', sans-serif, 'arial';
+        font-weight: 600;
+        font-size: 72px;
+        color: black;
+        text-align: center;
+    }; */
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+ .productList {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+
+  overflow: auto;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  
 }
 
-.App-link {
-  color: #61dafb;
+
+h1 {
+  font-size: 1.2rem;
+  text-transform: capitalize;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.productItem {
+  position: relative;
+  border-radius: 5px;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.3);
+  height: 500px;
+  overflow: hidden;
+  width: 400px;
 }
+
+.productItem > figure {
+  width: 90%;
+  margin: 20px auto 0 auto;
+}
+
+.productItem > figure > img {
+  width: 100%;
+}
+
+.details {
+  background-color: #FFF;
+  border-radius: 10px;
+  padding: 20px;
+  position: absolute;
+  top: 85%;
+  width: 100%;
+  transition: box-shadow .3s ease-in-out,
+              top .3s ease-in-out;
+}
+
+.productItem:hover .details {
+  box-shadow: 0 -5px 10px rgba(0,0,0,0.3);
+  top: 40%;
+}
+
+.deleteProductBtn {
+  background-color: #192a56;
+    border-radius: 5px;
+    color: #FFF;
+    display: block;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    text-transform: capitalize;
+    width: 100%;
+    transition: box-shadow .3s ease-in-out,
+                transform .3s ease-in-out;
+}
+
+.deleteProductBtn:hover {
+  box-shadow: 0 5px 10px rgba(0,0,0,.3);
+  transform: translateY(-2px);
+}
+

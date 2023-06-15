@@ -9,10 +9,10 @@
  .productList {
   display: flex;
   flex-direction: row;
-
   overflow: auto;
   align-items: center;
   justify-content: center;
+  margin: 1%;
   
 }
 
@@ -24,6 +24,7 @@ h1 {
 
 .productItem {
   position: relative;
+  margin: 1%;
   border-radius: 5px;
   box-shadow: 0 5px 10px rgba(0,0,0,0.3);
   height: 500px;

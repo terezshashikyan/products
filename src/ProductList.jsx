@@ -93,7 +93,7 @@ const [newProduct, setNewProduct] = useState({
 
       <div className = "productList">
         {products.map((product, index) => (
-          <ProductItem productKey = {index} productImg = {product.productImg} productName = {product.productName} productDescription = {product.productDescription} productPrice = {product.productPrice} deleteProduct = {() => deleteProduct(index)}/>
+          <ProductItem productKey = {index} productImg = {product.productImg} productName = {product.productName} productDescription = {product.productDescription} productPrice = {product.productPrice} deleteProduct = {(e) => {e.stopPropagation(); deleteProduct(index)}}/>
         ))}
       </div>
 
